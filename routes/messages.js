@@ -14,10 +14,4 @@ router.get('/', async (req, res) => {
   res.json(messages);
 });
 
-// ✅ DELETE MESSAGE (ADD THIS)
-router.delete('/:id', async (req, res) => {
-  await Message.findByIdAndDelete(req.params.id);
-  res.json({ success: true });
-});
-
 module.exports = router;
